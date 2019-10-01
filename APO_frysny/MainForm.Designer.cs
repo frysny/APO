@@ -1,6 +1,6 @@
 ﻿namespace APO_frysny
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
@@ -30,9 +30,9 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.plikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.histogramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.otwórzObrazToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zamknijToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.histogramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +43,7 @@
             this.histogramToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(943, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -56,35 +56,36 @@
             this.plikToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.plikToolStripMenuItem.Text = "Plik";
             // 
-            // histogramToolStripMenuItem
-            // 
-            this.histogramToolStripMenuItem.Name = "histogramToolStripMenuItem";
-            this.histogramToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
-            this.histogramToolStripMenuItem.Text = "Histogram";
-            // 
             // otwórzObrazToolStripMenuItem
             // 
             this.otwórzObrazToolStripMenuItem.Name = "otwórzObrazToolStripMenuItem";
-            this.otwórzObrazToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.otwórzObrazToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.otwórzObrazToolStripMenuItem.Text = "Otwórz obraz";
             this.otwórzObrazToolStripMenuItem.Click += new System.EventHandler(this.OtwórzObrazToolStripMenuItem_Click);
             // 
             // zamknijToolStripMenuItem
             // 
             this.zamknijToolStripMenuItem.Name = "zamknijToolStripMenuItem";
-            this.zamknijToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.zamknijToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.zamknijToolStripMenuItem.Text = "Zamknij";
             this.zamknijToolStripMenuItem.Click += new System.EventHandler(this.ZamknijToolStripMenuItem_Click);
             // 
-            // Form1
+            // histogramToolStripMenuItem
+            // 
+            this.histogramToolStripMenuItem.Name = "histogramToolStripMenuItem";
+            this.histogramToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.histogramToolStripMenuItem.Text = "Histogram";
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.ClientSize = new System.Drawing.Size(943, 532);
             this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
