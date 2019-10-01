@@ -19,7 +19,7 @@ namespace APO_frysny
         }
 
         private void OtwórzObrazToolStripMenuItem_Click(object sender, EventArgs e)
-        {          
+        {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.ShowDialog();
             Form _form = new Form();
@@ -31,13 +31,18 @@ namespace APO_frysny
             pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             _form.Text = "Obrazek" + obraz;
             _form.Controls.Add(pictureBox);
-            _form.MdiParent = this;
+            _form.MdiParent = this;         
             _form.Show();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void HistogramToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild != null) { Histogram hist = new Histogram(this.ActiveMdiChild)};
         }
     }
 }

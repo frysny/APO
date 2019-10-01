@@ -33,6 +33,7 @@
             this.otwórzObrazToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zamknijToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.histogramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.histogramToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,9 +73,18 @@
             // 
             // histogramToolStripMenuItem
             // 
+            this.histogramToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.histogramToolStripMenuItem1});
             this.histogramToolStripMenuItem.Name = "histogramToolStripMenuItem";
-            this.histogramToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
-            this.histogramToolStripMenuItem.Text = "Histogram";
+            this.histogramToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.histogramToolStripMenuItem.Text = "Operacje";
+            // 
+            // histogramToolStripMenuItem1
+            // 
+            this.histogramToolStripMenuItem1.Name = "histogramToolStripMenuItem1";
+            this.histogramToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.histogramToolStripMenuItem1.Text = "Histogram";
+            this.histogramToolStripMenuItem1.Click += new System.EventHandler(this.HistogramToolStripMenuItem1_Click);
             // 
             // MainForm
             // 
@@ -100,6 +110,7 @@
         private System.Windows.Forms.ToolStripMenuItem otwórzObrazToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zamknijToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem histogramToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem histogramToolStripMenuItem1;
     }
 }
 
