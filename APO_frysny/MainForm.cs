@@ -10,6 +10,7 @@ namespace APO_frysny
         public MainForm()
         {
             InitializeComponent();
+            IsMdiContainer = true;
             obraz = 0;
         }
 
@@ -22,27 +23,37 @@ namespace APO_frysny
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.ShowDialog();
-            Form _form = new Form();
-            obraz++;
-            IsMdiContainer = true;
-            PictureBox pictureBox = new PictureBox();
-            pictureBox.Dock = DockStyle.Fill;
-            pictureBox.Image = Image.FromFile(openFileDialog.FileName);
-            pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-            _form.Text = "Obrazek" + obraz;
-            _form.Controls.Add(pictureBox);
-            _form.MdiParent = this;         
-            _form.Show();
+            MakePictureForm(openFileDialog);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
             
         }
+        public PictureBox MakePictureBox(string picturepath)
+        {
+            PictureBox pictureBox = new PictureBox();
+            pictureBox.Dock = DockStyle.Fill;
+            pictureBox.Image = Image.FromFile(picturepath);
+            pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            return pictureBox;
+        }
+        public void MakePictureForm(OpenFileDialog ofg)
+        {
+            Form _form = new Form();
+            obraz++;
+            PictureBox pictureBox = MakePictureBox(ofg.FileName);
+            _form.Text = "Obrazek" + obraz;
+            _form.Controls.Add(pictureBox);
+            _form.MdiParent = this;
+            _form.Show();
+
+        }
 
         private void HistogramToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            if (this.ActiveMdiChild != null) { Histogram hist = new Histogram(this.ActiveMdiChild)};
+            if (this.ActiveMdiChild != null) { Histogram hist = new Histogram(this.ActiveMdiChild); };
         }
     }
 }
