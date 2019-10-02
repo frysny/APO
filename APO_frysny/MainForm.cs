@@ -44,11 +44,11 @@ namespace APO_frysny
             Form _form = new Form();
             obraz++;
             PictureBox pictureBox = MakePictureBox(ofg.FileName);
-            _form.Text = "Obrazek" + obraz;
+            _form.Text= "Obrazek" + obraz;
+            _form.Name = ofg.FileName;
             _form.Controls.Add(pictureBox);
             _form.MdiParent = this;
             _form.Show();
-
         }
 
         private void HistogramToolStripMenuItem1_Click(object sender, EventArgs e)
